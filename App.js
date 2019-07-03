@@ -45,9 +45,9 @@ export default class App extends Component {
             );
 
 
-        updateSearch = search =>{
-            this.setState({search:search});
-        };
+    updateSearch = search =>{
+        this.setState({search:search});
+    };
 
     render() {
         const search = this.state.search;
@@ -65,7 +65,7 @@ export default class App extends Component {
                 <SearchBar
                     placeholder = "Type Here..."
                     lightTheme
-                    style={styles.search_bar}
+                    containerStyle={styles.search_bar}
                     onChangeText = {this.updateSearch}
                     value={{search}}
                 />
@@ -84,6 +84,7 @@ export default class App extends Component {
 
 const styles = StyleSheet.create({
     container: {
+        flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#F5FCFF',
@@ -112,7 +113,6 @@ const styles = StyleSheet.create({
         marginLeft: "5%",
     },
     search_bar: {
-        position: "absolute",
         width: 300,
     }
 
